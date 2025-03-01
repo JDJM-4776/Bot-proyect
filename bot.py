@@ -15,7 +15,7 @@ async def hi(ctx):
     await ctx.send(f'Hi, I am {bot.user}!')
 
 @bot.command()
-async def sumar(ctx, num1: float, num2: float):
+async def decimal(ctx, num1: float, num2: float):
     resultado = num1 + num2
     await ctx.send(f'El resultado de sumar {num1} y {num2} es {resultado}.')
 
