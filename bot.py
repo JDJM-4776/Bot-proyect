@@ -15,6 +15,11 @@ async def hi(ctx):
     await ctx.send(f'Hi, I am {bot.user}!')
 
 @bot.command()
+async def money(ctx, future: int, interest: float):
+    present = future / (1 + interest)
+    await ctx.send(f'The future value is {future} and the interest is {interest} so the present value is {present}.')
+
+@bot.command()
 async def decimal(ctx, num1: float, num2: float):
     resultado = num1 + num2
     await ctx.send(f'El resultado de sumar {num1} y {num2} es {resultado}.')
