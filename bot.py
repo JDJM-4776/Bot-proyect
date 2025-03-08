@@ -28,9 +28,9 @@ async def XD(ctx, count_xd = 5):
 @bot.command()
 async def helping(ctx):
     await ctx.send(f"#money: means you can use the formula to find the FV for every number; #hi: the robot says Hi; #XD: Repeat certain times the word XD (10 times MAX); #decimals: The robot add two decimal numbers")
-@bot.command()
-async def trying(ctx):
-    codes = "#XD","#decimals","#helping","#decimals","#hi"
-    if codes != ctx:
-        print(f"This command doesn't work, if you want help write #helping")
+try:
+    numero = int(input("Escoge un número"))
+    print (f"El doble de {numero} es {numero * 2}")
+except ValueError:
+    print("¡Error! No ingresaste un número válido.") 
 bot.run("Token")
